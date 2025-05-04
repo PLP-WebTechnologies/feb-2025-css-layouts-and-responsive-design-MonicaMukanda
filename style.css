@@ -1,0 +1,89 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Enable Flexbox for the navigation */
+    justify-content: center; /* Center the navigation items */
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+    text-align: center;
+    padding: 2em 0;
+}
+
+.content {
+    display: flex; /* Enable Flexbox for the content cards */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line on smaller screens */
+    gap: 20px; /* Space between the cards */
+}
+
+.card {
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 5px;
+    flex-basis: calc(33.33% - 20px); /* Distribute cards across the width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #333;
+    color: white;
+    position: sticky; /* Stick the footer to the bottom */
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For tablets (min-width: 768px) */
+@media (min-width: 768px) {
+    nav ul {
+        justify-content: flex-start; /* Align navigation to the left on larger screens */
+    }
+
+    .card {
+        flex-basis: calc(50% - 20px); /* Two cards side-by-side on tablets */
+    }
+}
+
+/* For desktops (min-width: 992px) */
+@media (min-width: 992px) {
+    .card {
+        flex-basis: calc(33.33% - 20px); /* Three cards side-by-side on desktops */
+    }
+}
